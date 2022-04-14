@@ -128,36 +128,46 @@
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"
             tabindex="-1"
-            [ngClass]="toggle ? 'transition ease-out duration-100 transform opacity-100 scale-100' : 'hidden transition ease-in duration-75 transform opacity-0 scale-95'"
+            [ngClass]="
+              toggle
+                ? 'transition ease-out duration-100 transform opacity-100 scale-100'
+                : 'hidden transition ease-in duration-75 transform opacity-0 scale-95'
+            "
           >
             <li>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-300"
+                class="block p-2 text-sm text-gray-700 hover:bg-blue-300"
                 role="menuitem"
                 tabindex="-1"
                 id="user-menu-item-0"
-                >Your Profile</a
               >
+                <i class="fa-solid fa-user"></i>
+                <span class="px-2">Your Profile</span>
+              </a>
             </li>
             <li>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-300"
+                class="block p-2 text-sm text-gray-700 hover:bg-blue-300"
                 role="menuitem"
                 tabindex="-1"
                 id="user-menu-item-1"
-                >Settings</a
+              >
+                <i class="fa-solid fa-gears"></i>
+                <span class="px-2">Settings</span></a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-300"
+                class="block p-2 text-sm text-gray-700 hover:bg-blue-300"
                 role="menuitem"
                 tabindex="-1"
                 id="user-menu-item-2"
-                >Sign out</a
+              >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="px-2">Sign out</span></a
               >
             </li>
           </ul>
@@ -169,8 +179,8 @@
   <!-- Mobile menu, show/hide based on menu state. -->
   <!-- <div class="sm:hidden" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1"> -->
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <!-- <a
+  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+  <!-- <a
         href="#"
         class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
         aria-current="page"
@@ -194,6 +204,6 @@
         class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
         >Calendar</a
       > -->
-    <!-- </div>
+  <!-- </div>
   </div> -->
 </nav>
