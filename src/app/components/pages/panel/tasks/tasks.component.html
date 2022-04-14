@@ -1,7 +1,5 @@
 <app-panel-template>
-   <div class="h-full px-4">
-      <h1 class="text-center">
-         hello
-      </h1>
+   <div class="h-full overflow-y-auto px-4">
+      <app-task-card *ngFor="let task of tasks" [task]="task"></app-task-card>
    </div>
 </app-panel-template>

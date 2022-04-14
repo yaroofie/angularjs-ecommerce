@@ -1,1 +1,20 @@
-<p>task-card works!</p>
+<div
+  *ngIf="task"
+  class="mb-4 overflow-hidden rounded-full bg-slate-200 shadow-lg flex justify-between items-center"
+>
+  <!-- content and select -->
+  <label [for]="task.id" class="p-4 w-full flex items-center hover:bg-slate-300 cursor-pointer">
+    <input
+      type="checkbox"
+      class="p-2"
+      [name]="task.id"
+      [id]="task.id"
+      [value]="selected"
+      (change)="(onSelect)"
+
+    />
+    <p class="mx-2 w-full">{{ task.content }}</p>
+  </label>
+  <!-- options -->
+  <div class="p-4 flex items-center hover:bg-slate-300 cursor-pointer" (click)="onDelete()">delete</div>
+</div>
